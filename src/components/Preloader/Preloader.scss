@@ -1,0 +1,95 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0e3a3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+              visibility 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &--hiding {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  &__word {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__letter {
+    display: inline-block;
+    font-family: 'Bodoni';
+    font-weight: 900;
+    font-size: clamp(44px, 11vw, 108px);
+    color: #c0d7dd;
+    line-height: 1;
+    opacity: 0;
+    transform: translateY(50px) skewY(6deg);
+    animation: letterDrop 0.65s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    will-change: transform, opacity;
+  }
+
+  &__tagline {
+    overflow: hidden;
+    height: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__tagline-text {
+    font-family: 'Calibri', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(192, 215, 221, 0.55);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  &__track {
+    width: clamp(120px, 20vw, 220px);
+    height: 1px;
+    background: rgba(192, 215, 221, 0.15);
+    overflow: hidden;
+    border-radius: 1px;
+    opacity: 0;
+    animation: fadeUp 0.4s 1s ease forwards;
+  }
+
+  &__fill {
+    height: 100%;
+    width: 0;
+    background: #c0d7dd;
+    border-radius: 1px;
+    animation: loadBar 3s 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+}
+
+@keyframes letterDrop {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewY(0deg);
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loadBar {
+  to { width: 100%; }
+}

@@ -1,0 +1,137 @@
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    'item1 item2 item3 item4'
+    'item5 item5 item6 item7'
+    'item5 item5 item9 item9'
+    'item8 item8 item9 item9';
+  gap: 8px;
+  background: #c0d7dd;
+}
+
+.pictures__item {
+  overflow: hidden;
+}
+
+.pictures__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pictures__item--1 {
+  grid-area: item1;
+  aspect-ratio: 0.68;
+}
+
+.pictures__item--2 {
+  grid-area: item2;
+  aspect-ratio: 0.68;
+}
+
+.pictures__item--3 {
+  grid-area: item3;
+  aspect-ratio: 0.68;
+}
+
+.pictures__item--4 {
+  grid-area: item4;
+  aspect-ratio: 0.68;
+}
+
+.pictures__item--5 {
+  grid-area: item5;
+  min-height: 390px;
+}
+
+.pictures__item--6 {
+  grid-area: item6;
+  min-height: 255px;
+}
+
+.pictures__item--7 {
+  grid-area: item7;
+  min-height: 255px;
+}
+
+.pictures__item--8 {
+  grid-area: item8;
+  min-height: 300px;
+}
+
+.pictures__item--9 {
+  grid-area: item9;
+  min-height: 300px;
+}
+
+// Планшет — сетка та же, уменьшаем высоты
+@media (max-width: 1100px) {
+  .pictures {
+    gap: 6px;
+  }
+
+  .pictures__item--5 {
+    min-height: 280px;
+  }
+
+  .pictures__item--6,
+  .pictures__item--7 {
+    min-height: 190px;
+  }
+
+  .pictures__item--8,
+  .pictures__item--9 {
+    min-height: 220px;
+  }
+}
+
+// Мобильный — сетка та же, высоты ещё меньше
+@media (max-width: 768px) {
+  .pictures {
+    gap: 4px;
+  }
+
+  .pictures__item--1,
+  .pictures__item--2,
+  .pictures__item--3,
+  .pictures__item--4 {
+    aspect-ratio: 0.68;
+  }
+
+  .pictures__item--5 {
+    min-height: 180px;
+  }
+
+  .pictures__item--6,
+  .pictures__item--7 {
+    min-height: 120px;
+  }
+
+  .pictures__item--8,
+  .pictures__item--9 {
+    min-height: 140px;
+  }
+}
+
+// Маленький мобильный — сетка та же, минимальные высоты
+@media (max-width: 480px) {
+  .pictures {
+    gap: 3px;
+  }
+
+  .pictures__item--5 {
+    min-height: 100px;
+  }
+
+  .pictures__item--6,
+  .pictures__item--7 {
+    min-height: 70px;
+  }
+
+  .pictures__item--8,
+  .pictures__item--9 {
+    min-height: 80px;
+  }
+}

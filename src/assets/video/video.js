@@ -1,0 +1,17 @@
+export { default as video3 } from './1.mp4';
+export { default as video11 } from './12.mp4';
+export { default as video13 } from './13.mp4';
+export { default as video5 } from './14.mp4';
+export { default as video10 } from './15.mp4';
+export { default as video6 } from './16.mp4';
+export { default as video9 } from './17.mp4';
+export { default as video2 } from './18.mp4';
+export { default as video14 } from './19.mp4';
+export { default as video1 } from './2.mp4';
+export { default as video4 } from './4.mp4';
+export { default as video12 } from './6.mp4';
+export { default as video7 } from './7.mp4';
+export { default as video8 } from './8.mp4';
+export { default as video16 } from './bigg.mp4';
+export { default as video17 } from './bigSea.mp4';
+export { default as video15 } from './grib.mp4';
