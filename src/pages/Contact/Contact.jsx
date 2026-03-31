@@ -22,7 +22,7 @@ export const Contact = () => {
             target='_blank'
             rel='noreferrer'
           >
-            {t('about.youtube')}
+            {t('contact.youtube')}
           </a>
           <a
             className='contact__btn'
@@ -30,7 +30,15 @@ export const Contact = () => {
             target='_blank'
             rel='noreferrer'
           >
-            {t('about.instagram')}
+            {t('contact.instagram')}
+          </a>
+          <a
+            className='contact__btn'
+            href='https://www.tiktok.com/@alisi.art'
+            target='_blank'
+            rel='noreferrer'
+          >
+            {t('contact.tiktok')}
           </a>
         </div>
       </div>

@@ -1,4 +1,5 @@
 export { default as img3 } from './1.jpg';
+export { default as img1 } from './10.jpg';
 export { default as img13 } from './111.jpg';
 export { default as img11 } from './12.jpg';
 export { default as img9 } from './13.jpg';

@@ -13,6 +13,7 @@
   "home": {
     "title": "Alisi Art",
     "shopOriginals": "Shop Original Paintings",
+    "works": "Works",
     "shopPrints": "Shop All Prints",
     "aboutTitle": "Meet the Artist",
     "aboutText": "Learn more",
@@ -58,7 +59,7 @@
     },
     "painting4": {
       "title": "Original artwork - only one available",
-      "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
+      "description": "Oil on archival 100% cotton paper (300 gsm), cold-pressed",
       "size": "A5 / 7.08 × 7.08 inches",
       "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
       "price": "270 €",
@@ -96,8 +97,8 @@
       "title": "Original artwork - only one available",
       "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
       "size": "A5 / 5.83 × 8.27 inches",
-      "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
-      "price": "160 €",
+      "subDescription": "Painted on high-quality cotton paper with natural deckled edges.Natural wood frame with museum glass.",
+      "price": "300 €",
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
@@ -156,6 +157,15 @@
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
     "painting15": {
+      "title": "Original artwork - only one available",
+      "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
+      "size": "A5 / 5.83 × 8.27 inches",
+      "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
+      "price": "160 €",
+      "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
+      "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
+    },
+    "painting16": {
       "title": "Acrylic on cotton canvas",
       "description": "Acrylic on cotton canvas",
       "size": "24 inches (2 cm profile)",
@@ -164,7 +174,7 @@
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
-    "painting16": {
+    "painting17": {
       "title": "Oil on cotton canvas",
       "description": "Oil on cotton canvas",
       "size": "30 × 30 inches (2 cm profile)",
@@ -173,7 +183,7 @@
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
-    "painting17": {
+    "painting18": {
       "title": "Oil on linen canvas",
       "description": "Oil on linen canvas",
       "size": "55 × 39 inches (3 cm profile)",
@@ -208,6 +218,7 @@
     "title": "Contact",
     "instagram": "instagram",
     "youtube": "youtube",
+    "tiktok": "TikTok",
     "email": "alisiartstudio@gmail.com"
   }
 }

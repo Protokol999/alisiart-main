@@ -6,8 +6,11 @@
     'item5 item5 item6 item7'
     'item5 item5 item9 item9'
     'item8 item8 item9 item9';
+  background: #faf7f2;
   gap: 8px;
-  background: #c0d7dd;
+  max-width: 1200px; // или любая нужная ширина
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .pictures__item {

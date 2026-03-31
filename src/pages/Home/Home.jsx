@@ -12,49 +12,76 @@ export const Home = () => {
 
   useEffect(() => {
     const io = new IntersectionObserver(
-      entries => entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('in-view');
-      }),
+      entries =>
+        entries.forEach(e => {
+          if (e.isIntersecting) e.target.classList.add('in-view');
+        }),
       { threshold: 0.1 }
     );
     sectionsRef.current.forEach(el => el && io.observe(el));
     return () => io.disconnect();
   }, []);
 
-  const r = el => { if (el && !sectionsRef.current.includes(el)) sectionsRef.current.push(el); };
+  const r = el => {
+    if (el && !sectionsRef.current.includes(el)) sectionsRef.current.push(el);
+  };
 
   return (
     <div className='home'>
-
       {/* ───── 01 HERO ───── */}
-      <section className='home__hero'>
-        <img className='home__hero-bg' src={grib} alt='' />
-        <div className='home__hero-body'>
-          <span className='home__hero-eyebrow'>Alisi Art Studio</span>
-          <h1 className='home__hero-title'>{t('home.title')}</h1>
-          <div className='home__hero-cta'>
-            <button className='btn btn--solid' onClick={() => navigate('/originals')}>
-              {t('home.shopOriginals')}
-            </button>
-            <button className='btn btn--ghost' onClick={() => navigate('/prints')}>
-              {t('home.shopPrints')}
-            </button>
+      {/* Обёртка даёт отступы по бокам — картинка не на весь экран */}
+      <div className='home__hero-wrap'>
+        <section className='home__hero'>
+          <img className='home__hero-bg' src={grib} alt='' />
+          <div className='home__hero-body'>
+            <span className='home__hero-eyebrow'>Alisi Art Studio</span>
+            <h1 className='home__hero-title'>{t('home.title')}</h1>
+            <div className='home__hero-cta'>
+              <button
+                className='btn btn--solid'
+                onClick={() => navigate('/originals')}
+              >
+                {t('home.shopOriginals')}
+              </button>
+              <button
+                className='btn btn--ghost'
+                onClick={() => navigate('/prints')}
+              >
+                {t('home.shopPrints')}
+              </button>
+            </div>
           </div>
-        </div>
-        <div className='home__hero-scroll'>
-          <svg width='18' height='28' viewBox='0 0 18 28' fill='none'>
-            <rect x='0.75' y='0.75' width='16.5' height='26.5' rx='8.25' stroke='currentColor' strokeWidth='1.5'/>
-            <rect className='home__hero-scroll-dot' x='8' y='5' width='2' height='6' rx='1' fill='currentColor'/>
-          </svg>
-        </div>
-      </section>
+          <div className='home__hero-scroll'>
+            <svg width='18' height='28' viewBox='0 0 18 28' fill='none'>
+              <rect
+                x='0.75'
+                y='0.75'
+                width='16.5'
+                height='26.5'
+                rx='8.25'
+                stroke='currentColor'
+                strokeWidth='1.5'
+              />
+              <rect
+                className='home__hero-scroll-dot'
+                x='8'
+                y='5'
+                width='2'
+                height='6'
+                rx='1'
+                fill='currentColor'
+              />
+            </svg>
+          </div>
+        </section>
+      </div>
 
       {/* ───── 02 WORKS ───── */}
       <section className='home__works'>
         <div className='home__works-head' ref={r}>
           <div className='home__works-head-left'>
             <span className='home__works-num'>02</span>
-            <h2 className='home__works-title'>Works</h2>
+            <h2 className='home__works-title'>{t('home.works')}</h2>
           </div>
           <span className='home__works-caption'>Selected originals</span>
         </div>
@@ -62,7 +89,10 @@ export const Home = () => {
           <Pictures />
         </div>
         <div className='home__works-foot' ref={r}>
-          <button className='btn btn--solid' onClick={() => navigate('/originals')}>
+          <button
+            className='btn btn--solid'
+            onClick={() => navigate('/originals')}
+          >
             {t('home.shopOriginals')} &rarr;
           </button>
         </div>
@@ -70,14 +100,18 @@ export const Home = () => {
 
       {/* ───── 03 ARTIST ───── */}
       <section className='home__artist'>
+        {/* Фото внутри фрейма с декоративной рамкой */}
         <div className='home__artist-photo' ref={r}>
-          <img src={alina} alt='Alina' />
+          <div className='home__artist-photo-frame'>
+            <img src={alina} alt='Alina' />
+          </div>
         </div>
         <div className='home__artist-info' ref={r}>
           <span className='home__artist-label'>The Artist</span>
           <h2 className='home__artist-name'>{t('home.aboutTitle')}</h2>
           <div className='home__artist-divider' />
-          <button className='btn btn--solid' onClick={() => navigate('about')}>
+          {/* Оранжевая кнопка */}
+          <button className='btn btn--orange' onClick={() => navigate('about')}>
             {t('home.aboutText')}
           </button>
         </div>
@@ -109,7 +143,8 @@ export const Home = () => {
           <div ref={r}>
             <span className='home__commission-eyebrow'>Custom work</span>
             <h2 className='home__commission-title'>
-              {t('home.customTitle')}<br />
+              {t('home.customTitle')}
+              <br />
               <em>{t('home.customSubTitle')}</em>
             </h2>
             <button
@@ -121,7 +156,6 @@ export const Home = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

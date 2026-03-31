@@ -1,8 +1,8 @@
 {
+  "homepage": "https://Protokol999.github.io/alisiart-main",
   "name": "alisiart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Protokol999.github.io/alisiart",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
