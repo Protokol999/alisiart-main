@@ -7,6 +7,14 @@ export const Navbar = () => {
   const { language, setLanguage, t } = useI18n();
   const nextLanguage = language === 'en' ? 'ru' : 'en';
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Появление фона при скролле
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Закрывать меню при ресайзе до десктопа
   useEffect(() => {
@@ -28,7 +36,9 @@ export const Navbar = () => {
   const close = () => setMenuOpen(false);
 
   return (
-    <nav className='navbar'>
+    <nav
+      className={`navbar${scrolled ? ' navbar--scrolled' : ''}${menuOpen ? ' navbar--menu-open' : ''}`}
+    >
       {/* Десктоп */}
       <div className='navbar__list'>
         <NavLink to='/'>{t('navbar.home')}</NavLink>
@@ -52,7 +62,7 @@ export const Navbar = () => {
 
       {/* Бургер кнопка */}
       <button
-        className={`navbar__burger ${menuOpen ? 'is-open' : ''}`}
+        className={`navbar__burger${menuOpen ? ' is-open' : ''}`}
         onClick={() => setMenuOpen(o => !o)}
         aria-label='Menu'
       >
@@ -62,7 +72,7 @@ export const Navbar = () => {
       </button>
 
       {/* Мобильное меню */}
-      <div className={`navbar__mobile ${menuOpen ? 'is-open' : ''}`}>
+      <div className={`navbar__mobile${menuOpen ? ' is-open' : ''}`}>
         <NavLink to='/' onClick={close}>
           {t('navbar.home')}
         </NavLink>

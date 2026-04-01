@@ -7,11 +7,9 @@
   width: min(1100px, calc(100% - 48px));
   box-sizing: border-box;
 
-  // Стеклянная подложка под цвет страницы
-  background: rgba(250, 247, 242, 0.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(250, 247, 242, 0.55);
+  // По умолчанию — прозрачный, без blur
+  background: rgba(250, 247, 242, 0);
+  border: 1px solid rgba(250, 247, 242, 0);
   border-radius: 50px;
   padding: 0 28px;
   height: 52px;
@@ -20,6 +18,18 @@
   align-items: center;
   justify-content: center;
   gap: 28px;
+
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+
+  // После скролла — плотный фон, без blur
+  &--scrolled {
+    background: rgba(250, 247, 242, 0.96);
+    border-color: rgba(14, 58, 61, 0.08);
+    box-shadow: 0 2px 28px rgba(14, 58, 61, 0.07);
+  }
 }
 
 .navbar__list {
@@ -31,7 +41,7 @@
 }
 
 .navbar__list a {
-  color: rgba(14, 58, 61, 0.7);
+  color: #6f7b63;
   text-decoration: none;
   font-size: 12px;
   font-family: 'Calibri', sans-serif;
@@ -43,16 +53,31 @@
   transition:
     color 0.2s ease,
     background 0.2s ease;
+
+  &:hover {
+    color: #0e3a3d;
+    background: rgba(250, 247, 242, 0.12);
+  }
+
+  &.active {
+    color: #0e3a3d;
+    background: rgba(250, 247, 242, 0.16);
+  }
 }
 
-.navbar__list a:hover {
-  color: #0e3a3d;
-  background: rgba(14, 58, 61, 0.07);
-}
+// Ссылки темнеют после скролла
+.navbar--scrolled .navbar__list a {
+  color: rgba(14, 58, 61, 0.7);
 
-.navbar__list a.active {
-  color: #0e3a3d;
-  background: rgba(14, 58, 61, 0.1);
+  &:hover {
+    color: #0e3a3d;
+    background: rgba(14, 58, 61, 0.07);
+  }
+
+  &.active {
+    color: #0e3a3d;
+    background: rgba(14, 58, 61, 0.1);
+  }
 }
 
 .navbar__language-toggle {
@@ -60,10 +85,10 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  border: 1px solid rgba(14, 58, 61, 0.18);
+  border: 1px solid rgba(250, 247, 242, 0.4);
   border-radius: 30px;
   background: transparent;
-  color: rgba(14, 58, 61, 0.55);
+  color: #6f7b63;
   font-size: 11px;
   font-family: 'Calibri', sans-serif;
   font-weight: 700;
@@ -76,21 +101,41 @@
     color 0.2s ease;
   white-space: nowrap;
   flex-shrink: 0;
+
+  &:hover {
+    color: #0e3a3d;
+    border-color: rgba(250, 247, 242, 0.7);
+    background: rgba(250, 247, 242, 0.1);
+  }
+
+  span {
+    color: rgba(250, 247, 242, 0.35);
+    transition: color 0.2s ease;
+  }
+
+  .is-active {
+    color: #0e3a3d;
+  }
 }
 
-.navbar__language-toggle:hover {
-  color: #0e3a3d;
-  border-color: rgba(14, 58, 61, 0.38);
-  background: rgba(14, 58, 61, 0.05);
-}
+// Переключатель языка темнеет после скролла
+.navbar--scrolled .navbar__language-toggle {
+  border-color: #6f7b63;
+  color: #6f7b63;
 
-.navbar__language-toggle span {
-  color: rgba(14, 58, 61, 0.38);
-  transition: color 0.2s ease;
-}
+  &:hover {
+    color: #0e3a3d;
+    border-color: rgba(14, 58, 61, 0.38);
+    background: rgba(14, 58, 61, 0.05);
+  }
 
-.navbar__language-toggle .is-active {
-  color: #0e3a3d;
+  span {
+    color: rgba(14, 58, 61, 0.38);
+  }
+
+  .is-active {
+    color: #0e3a3d;
+  }
 }
 
 .navbar__language-divider {
@@ -131,30 +176,30 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
-}
 
-.navbar__burger span {
-  display: block;
-  width: 100%;
-  height: 1.5px;
-  background: rgba(14, 58, 61, 0.75);
-  border-radius: 2px;
-  transform-origin: center;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease,
-    width 0.3s ease;
-}
+  span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(14, 58, 61, 0.75);
+    border-radius: 2px;
+    transform-origin: center;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      width 0.3s ease;
+  }
 
-.navbar__burger.is-open span:nth-child(1) {
-  transform: translateY(6.5px) rotate(45deg);
-}
-.navbar__burger.is-open span:nth-child(2) {
-  opacity: 0;
-  width: 0;
-}
-.navbar__burger.is-open span:nth-child(3) {
-  transform: translateY(-6.5px) rotate(-45deg);
+  &.is-open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  &.is-open span:nth-child(2) {
+    opacity: 0;
+    width: 0;
+  }
+  &.is-open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
 }
 
 // ── МОБИЛЬНОЕ МЕНЮ ───────────────────────────────────────────────────
@@ -166,8 +211,6 @@
   width: min(300px, 82vw);
   height: 100vh;
   background: rgba(250, 247, 242, 0.97);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -177,38 +220,46 @@
   transform: translateX(100%);
   transition: transform 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-left: 1px solid rgba(14, 58, 61, 0.08);
-}
 
-.navbar__mobile.is-open {
-  transform: translateX(0);
-}
+  &.is-open {
+    transform: translateX(0);
+  }
 
-.navbar__mobile a {
-  color: rgba(14, 58, 61, 0.55);
-  text-decoration: none;
-  font-size: 12px;
-  font-family: 'Calibri', sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  padding: 13px 0;
-  border-bottom: 1px solid rgba(14, 58, 61, 0.07);
-  width: 100%;
-  transition: color 0.2s ease;
-}
+  a {
+    color: rgba(14, 58, 61, 0.55);
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(14, 58, 61, 0.07);
+    width: 100%;
+    transition: color 0.2s ease;
 
-.navbar__mobile a:last-of-type {
-  border-bottom: none;
-}
+    &:last-of-type {
+      border-bottom: none;
+    }
 
-.navbar__mobile a:hover,
-.navbar__mobile a.active {
-  color: #0e3a3d;
-}
+    &:hover,
+    &.active {
+      color: #0e3a3d;
+    }
+  }
 
-.navbar__mobile .navbar__language-toggle {
-  margin-top: 28px;
-  border-color: rgba(14, 58, 61, 0.2);
+  .navbar__language-toggle {
+    margin-top: 28px;
+    border-color: rgba(14, 58, 61, 0.2);
+    color: rgba(14, 58, 61, 0.55);
+
+    span {
+      color: rgba(14, 58, 61, 0.38);
+    }
+    .is-active {
+      color: #0e3a3d;
+    }
+  }
 }
 
 // ── ОВЕРЛЕЙ ──────────────────────────────────────────────────────────
@@ -217,7 +268,6 @@
   inset: 0;
   background: rgba(14, 40, 42, 0.28);
   z-index: 14;
-  backdrop-filter: blur(2px);
   animation: fade-in 0.28s ease;
 }
 
@@ -266,6 +316,15 @@
     display: flex;
     position: static;
     transform: none;
+
+    span {
+      background: rgba(250, 247, 242, 0.85);
+    }
+  }
+
+  // После скролла бургер тоже темнеет
+  .navbar--scrolled .navbar__burger span {
+    background: rgba(14, 58, 61, 0.75);
   }
 
   .navbar__mobile {
@@ -285,14 +344,19 @@
     border-radius: 14px;
   }
 
-  // Логотип / название на мобилке
+  // Логотип на мобилке
   .navbar::before {
     content: 'Alisi Art';
     font-family: 'Bodoni', serif;
     font-weight: 900;
     font-size: 18px;
-    color: #0e3a3d;
+    color: #faf7f2;
     letter-spacing: 0.04em;
+    transition: color 0.45s ease;
+  }
+
+  .navbar--scrolled::before {
+    color: #0e3a3d;
   }
 }
 

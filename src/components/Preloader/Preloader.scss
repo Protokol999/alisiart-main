@@ -2,12 +2,13 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #0e3a3d;
+  background: #faf7f2;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
-              visibility 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+    visibility 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 
   &--hiding {
     opacity: 0;
@@ -31,7 +32,7 @@
     font-family: 'Bodoni';
     font-weight: 900;
     font-size: clamp(44px, 11vw, 108px);
-    color: #c0d7dd;
+    color: #6f7b63;
     line-height: 1;
     opacity: 0;
     transform: translateY(50px) skewY(6deg);
@@ -51,7 +52,7 @@
     font-size: 13px;
     letter-spacing: 0.35em;
     text-transform: uppercase;
-    color: rgba(192, 215, 221, 0.55);
+    color: #6f7b63;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeUp 0.6s 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
@@ -60,7 +61,7 @@
   &__track {
     width: clamp(120px, 20vw, 220px);
     height: 1px;
-    background: rgba(192, 215, 221, 0.15);
+    background: #faf7f2;
     overflow: hidden;
     border-radius: 1px;
     opacity: 0;
@@ -70,7 +71,7 @@
   &__fill {
     height: 100%;
     width: 0;
-    background: #c0d7dd;
+    background: #6f7b63;
     border-radius: 1px;
     animation: loadBar 3s 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
@@ -91,5 +92,7 @@
 }
 
 @keyframes loadBar {
-  to { width: 100%; }
+  to {
+    width: 100%;
+  }
 }
