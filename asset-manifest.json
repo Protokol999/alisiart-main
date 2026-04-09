@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/alisiart-main/static/css/main.459b13ea.css",
-    "main.js": "/alisiart-main/static/js/main.8a1c7764.js",
+    "main.css": "/alisiart-main/static/css/main.acf7b282.css",
+    "main.js": "/alisiart-main/static/js/main.a7609298.js",
     "static/media/13.mp4": "/alisiart-main/static/media/13.b2f60a0d2d05ee657269.mp4",
     "static/media/grib.mp4": "/alisiart-main/static/media/grib.adde34b487fe736a5ae5.mp4",
     "static/media/19.mp4": "/alisiart-main/static/media/19.bf10805fbc1af566bec2.mp4",
     "static/media/4.mp4": "/alisiart-main/static/media/4.0b84c561c37a08781035.mp4",
     "static/media/2.mp4": "/alisiart-main/static/media/2.3c9809fd1386c81e2649.mp4",
     "static/media/8.mp4": "/alisiart-main/static/media/8.976c1cfc7ae3e143691b.mp4",
+    "static/media/777.mp4": "/alisiart-main/static/media/777.fca5e9b2e9dd24594599.mp4",
     "static/media/17.mp4": "/alisiart-main/static/media/17.2b12b0c8afc776c3d008.mp4",
     "static/media/6.mp4": "/alisiart-main/static/media/6.c208667f48663b2f6e35.mp4",
     "static/media/bigg.mp4": "/alisiart-main/static/media/bigg.a9c50c56ca8abca01f46.mp4",
@@ -41,6 +42,7 @@
     "static/media/4.jpg": "/alisiart-main/static/media/4.08871f2bbce78acdc200.jpg",
     "static/media/22.jpg": "/alisiart-main/static/media/22.1dfa35ead270b79cdcc6.jpg",
     "static/media/13.jpg": "/alisiart-main/static/media/13.a40a7fb55b836a66a71c.jpg",
+    "static/media/777.jpg": "/alisiart-main/static/media/777.eab38d4974dbdd894101.jpg",
     "static/media/8.jpg": "/alisiart-main/static/media/8.b77eb549e9d7599ac103.jpg",
     "static/media/44.jpg": "/alisiart-main/static/media/44.313f8f7ff454eec255a2.jpg",
     "static/media/13_13.jpg": "/alisiart-main/static/media/13_13.108b4ec0295177dd1152.jpg",
@@ -48,6 +50,7 @@
     "static/media/10.jpg": "/alisiart-main/static/media/10.4e8688f6aa22bbbfbca4.jpg",
     "static/media/bigg.jpg": "/alisiart-main/static/media/bigg.bf276cb2d2c970229776.jpg",
     "static/media/alina.jpg": "/alisiart-main/static/media/alina.e350c3103b335a099f86.jpg",
+    "static/media/77.jpg": "/alisiart-main/static/media/77.bbe14fbc8e83d8021bfa.jpg",
     "static/media/10_10.jpg": "/alisiart-main/static/media/10_10.3b3ae0f568e92a1e4615.jpg",
     "static/media/15.jpg": "/alisiart-main/static/media/15.a0e34e8deb9b5904fba8.jpg",
     "static/media/5.jpg": "/alisiart-main/static/media/5.f84b33f6688cdfe889c4.jpg",
@@ -63,11 +66,11 @@
     "static/media/contact.jpg": "/alisiart-main/static/media/contact.6690c3b95d4566e66748.jpg",
     "static/media/BOD_BLAR.TTF": "/alisiart-main/static/media/BOD_BLAR.7b66c0e0c30772fab8f7.TTF",
     "index.html": "/alisiart-main/index.html",
-    "main.459b13ea.css.map": "/alisiart-main/static/css/main.459b13ea.css.map",
-    "main.8a1c7764.js.map": "/alisiart-main/static/js/main.8a1c7764.js.map"
+    "main.acf7b282.css.map": "/alisiart-main/static/css/main.acf7b282.css.map",
+    "main.a7609298.js.map": "/alisiart-main/static/js/main.a7609298.js.map"
   },
   "entrypoints": [
-    "static/css/main.459b13ea.css",
-    "static/js/main.8a1c7764.js"
+    "static/css/main.acf7b282.css",
+    "static/js/main.a7609298.js"
   ]
 }
