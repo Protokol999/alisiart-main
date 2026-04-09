@@ -14,6 +14,7 @@ import {
   picture5,
   picture6,
   picture7,
+  picture77,
   picture8,
   picture9,
   sea,
@@ -34,6 +35,7 @@ import {
   img5,
   img6,
   img7,
+  img777,
   img8,
   img9
 } from '../assets/img/img';
@@ -54,6 +56,7 @@ import {
   video5,
   video6,
   video7,
+  video777,
   video8,
   video9
 } from '../assets/video/video';
@@ -316,36 +319,35 @@ export const painting = [
   },
   {
     id: 'painting-16',
+    media: [
+      { type: 'video', src: video777 },
+      { type: 'image', src: picture77 },
+      { type: 'image', src: img777 }
+    ],
+    title: 'originals.painting15.title',
+    description: 'originals.painting15.description',
+    size: 'originals.painting15.size',
+    subDescription: 'originals.painting15.subDescription',
+    price: 'originals.painting15.price',
+    email: 'alisiartstudio@gmail.com', // ← email и instagram не переводим
+    instagram: 'https://instagram.com/alisi.art',
+    shipping: 'originals.painting15.shipping',
+    international: 'originals.painting15.international'
+  },
+  {
+    id: 'painting-17',
     sold: true,
     media: [
       { type: 'video', src: video15 },
       { type: 'image', src: picture15 },
       { type: 'image', src: img15 }
     ],
-    title: 'originals.painting16.title',
-    description: 'originals.painting16.description',
-    size: 'originals.painting16.size',
-    subDescription: 'originals.painting16.subDescription',
-    price: 'originals.painting16.price',
-    email: 'alisiartstudio@gmail.com', // ← email и instagram не переводим
-    instagram: 'https://instagram.com/alisi.art',
-    shipping: 'originals.painting16.shipping',
-    international: 'originals.painting16.international'
-  },
-  {
-    id: 'painting-17',
-    sold: true,
-    media: [
-      { type: 'video', src: video16 },
-      { type: 'image', src: picture5 },
-      { type: 'image', src: img16 }
-    ],
     title: 'originals.painting17.title',
     description: 'originals.painting17.description',
     size: 'originals.painting17.size',
     subDescription: 'originals.painting17.subDescription',
     price: 'originals.painting17.price',
-    email: 'alisiartstudio@gmail.com',
+    email: 'alisiartstudio@gmail.com', // ← email и instagram не переводим
     instagram: 'https://instagram.com/alisi.art',
     shipping: 'originals.painting17.shipping',
     international: 'originals.painting17.international'
@@ -354,18 +356,36 @@ export const painting = [
     id: 'painting-18',
     sold: true,
     media: [
-      { type: 'video', src: video17 },
-      { type: 'image', src: bigSea },
-      { type: 'image', src: img17 }
+      { type: 'video', src: video16 },
+      { type: 'image', src: picture5 },
+      { type: 'image', src: img16 }
     ],
     title: 'originals.painting18.title',
     description: 'originals.painting18.description',
     size: 'originals.painting18.size',
     subDescription: 'originals.painting18.subDescription',
     price: 'originals.painting18.price',
-    email: 'alisiartstudio@gmail.com', // ← email и instagram не переводим
+    email: 'alisiartstudio@gmail.com',
     instagram: 'https://instagram.com/alisi.art',
     shipping: 'originals.painting18.shipping',
     international: 'originals.painting18.international'
+  },
+  {
+    id: 'painting-19',
+    sold: true,
+    media: [
+      { type: 'video', src: video17 },
+      { type: 'image', src: bigSea },
+      { type: 'image', src: img17 }
+    ],
+    title: 'originals.painting19.title',
+    description: 'originals.painting19.description',
+    size: 'originals.painting19.size',
+    subDescription: 'originals.painting19.subDescription',
+    price: 'originals.painting19.price',
+    email: 'alisiartstudio@gmail.com', // ← email и instagram не переводим
+    instagram: 'https://instagram.com/alisi.art',
+    shipping: 'originals.painting19.shipping',
+    international: 'originals.painting19.international'
   }
 ];

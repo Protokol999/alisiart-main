@@ -9,6 +9,7 @@ export { default as img6 } from './16.jpg';
 export { default as img14 } from './3.jpg';
 export { default as img2 } from './4.jpg';
 export { default as img7 } from './5.jpg';
+export { default as img777 } from './777.jpg';
 export { default as img8 } from './8.jpg';
 export { default as img4 } from './9.jpg';
 export { default as img16 } from './bigg.png';

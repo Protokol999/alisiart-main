@@ -4,11 +4,11 @@
   align-items: center;
   gap: 8px;
   font-family: 'Calibri', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 14px 32px;
+  padding: 10px 24px;
   border-radius: 40px;
   border: 2px solid transparent;
   cursor: pointer;
@@ -56,6 +56,8 @@
     background: #c4622d;
     color: #fff;
     border-color: #c4622d;
+    font-size: 12px;
+    padding: 10px 22px;
     &:hover {
       transform: translateY(-3px);
       background: #a8511f;
@@ -267,7 +269,8 @@
 .home__artist-photo {
   display: flex;
   align-items: center;
-  padding: 48px 24px 48px 56px;
+  justify-content: center;
+  padding: 48px 24px;
   overflow: visible; // нужно для рамки ::before
 }
 
@@ -308,10 +311,11 @@
 }
 
 .home__artist-info {
-  background: transparent; // фон берём от .home__artist
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   padding: 72px 56px 72px 48px;
   gap: 26px;
 }

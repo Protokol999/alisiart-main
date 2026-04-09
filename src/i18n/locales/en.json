@@ -60,8 +60,8 @@
     "painting4": {
       "title": "Original artwork - only one available",
       "description": "Oil on archival 100% cotton paper (300 gsm), cold-pressed",
-      "size": "A5 / 7.08 × 7.08 inches",
-      "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
+      "size": "7.08 × 7.08 inches",
+      "subDescription": "Painted on high-quality cotton paper with natural deckled edges. Framed in a plastic frame with anti-glare glass",
       "price": "270 €",
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
@@ -69,7 +69,7 @@
     "painting5": {
       "title": "Original artwork - only one available",
       "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
-      "size": "A5 / 5.83 × 8.27 inches",
+      "size": " 5.83 × 8.27 inches",
       "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
       "price": "160 €",
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
@@ -105,7 +105,7 @@
     "painting9": {
       "title": "Original artwork - only one available",
       "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
-      "size": "A5 / 7.08 × 7.08 inches",
+      "size": "7.08 × 7.08 inches",
       "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
       "price": "160 €",
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
@@ -131,7 +131,7 @@
     },
     "painting12": {
       "title": "Original artwork - only one available",
-      "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
+      "description": "Tempera on primed wood panel",
       "size": "A4 / 8.27 × 11.7 inches",
       "subDescription": "The artwork is sold unframed and is perfect for framing.",
       "price": "300 €",
@@ -149,7 +149,7 @@
     },
     "painting14": {
       "title": "Original artwork - only one available",
-      "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
+      "description": "Oil on archival 100% cotton paper (280 gsm), fine grain",
       "size": "A4 / 8.27 × 11.7 inches",
       "subDescription": "Painted on high-quality cotton paper with natural deckled edges. The artwork is sold unframed and is perfect for framing.",
       "price": "250 €",
@@ -166,15 +166,24 @@
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
     "painting16": {
-      "title": "Acrylic on cotton canvas",
-      "description": "Acrylic on cotton canvas",
-      "size": "24 inches (2 cm profile)",
-      "subDescription": "All paintings come safely packaged and ready to hang with a Certificate of Authenticity.",
-      "price": "1000 €",
+      "title": "Original artwork - only one available",
+      "description": "Oil on archival 100% cotton paper (300 gsm), hot-pressed",
+      "size": "A5 / 5.83 × 8.27 inches",
+      "subDescription": "Painted on high-quality cotton paper with natural deckled edges.The artwork is sold unframed and is perfect for framing.",
+      "price": "160 €",
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
     "painting17": {
+      "title": "Acrylic on cotton canvas",
+      "description": "Acrylic on cotton canvas",
+      "size": " d - 60 cm (2 cm profile)",
+      "subDescription": "All paintings come safely packaged and ready to hangwith a Certificate of Authenticity.",
+      "price": "1000 €",
+      "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
+      "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
+    },
+    "painting18": {
       "title": "Oil on cotton canvas",
       "description": "Oil on cotton canvas",
       "size": "30 × 30 inches (2 cm profile)",
@@ -183,7 +192,7 @@
       "shipping": "Shipping and payment details will be arranged via email. Worldwide shipping available.",
       "international": "International orders: buyer is responsible for any additional taxes, tariffs, and customs fees upon import."
     },
-    "painting18": {
+    "painting19": {
       "title": "Oil on linen canvas",
       "description": "Oil on linen canvas",
       "size": "55 × 39 inches (3 cm profile)",

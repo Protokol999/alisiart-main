@@ -13,6 +13,7 @@ export { default as picture14 } from './33.jpg';
 export { default as picture2 } from './44.jpg';
 export { default as picture6 } from './55.jpg';
 export { default as picture8 } from './6.jpg';
+export { default as picture77 } from './77.jpg';
 export { default as picture7 } from './88.jpg';
 export { default as picture4 } from './99.jpg';
 export { default as about } from './about.jpg';
