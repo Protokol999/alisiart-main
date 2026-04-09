@@ -200,6 +200,7 @@ export const painting = [
   },
   {
     id: 'painting-9',
+    sold: true,
     media: [
       { type: 'video', src: video9 },
       { type: 'image', src: picture13 },
@@ -268,6 +269,7 @@ export const painting = [
   },
   {
     id: 'painting-13',
+    sold: true,
     media: [
       { type: 'video', src: video13 },
       { type: 'image', src: picture10 },
