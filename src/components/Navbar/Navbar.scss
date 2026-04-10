@@ -32,6 +32,14 @@
   }
 }
 
+// ── ЛОГОТИП ──────────────────────────────────────────────────────────
+.navbar__logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 .navbar__list {
   display: flex;
   align-items: center;
@@ -344,19 +352,8 @@
     border-radius: 14px;
   }
 
-  // Логотип на мобилке
-  .navbar::before {
-    content: 'Alisi Art';
-    font-family: 'Bodoni', serif;
-    font-weight: 900;
-    font-size: 18px;
-    color: #faf7f2;
-    letter-spacing: 0.04em;
-    transition: color 0.45s ease;
-  }
-
-  .navbar--scrolled::before {
-    color: #0e3a3d;
+  .navbar__logo {
+    height: 28px;
   }
 }
 

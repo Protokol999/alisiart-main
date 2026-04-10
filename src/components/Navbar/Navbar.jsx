@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { logo } from '../../assets/images';
 import { useI18n } from '../../i18n';
 import './Navbar.scss';
 
@@ -9,14 +10,12 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Появление фона при скролле
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Закрывать меню при ресайзе до десктопа
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) setMenuOpen(false);
@@ -25,7 +24,6 @@ export const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Блокировать скролл когда меню открыто
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
@@ -39,6 +37,9 @@ export const Navbar = () => {
     <nav
       className={`navbar${scrolled ? ' navbar--scrolled' : ''}${menuOpen ? ' navbar--menu-open' : ''}`}
     >
+      {/* Логотип */}
+      <img src={logo} alt='AlisiArt' className='navbar__logo' />
+
       {/* Десктоп */}
       <div className='navbar__list'>
         <NavLink to='/'>{t('navbar.home')}</NavLink>

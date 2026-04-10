@@ -25,5 +25,6 @@ export { default as commissions } from './commissions.jpg';
 export { default as contact } from './contact.jpg';
 export { default as grib } from './grib.jpg';
 export { default as picture15 } from './grib2.png';
+export { default as logo } from './logo.png';
 export { default as prints } from './prints.jpg';
 export { default as sea2 } from './sea2.jpg';
