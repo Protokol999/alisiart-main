@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/alisiart-main/static/css/main.16f9a64c.css",
-    "main.js": "/alisiart-main/static/js/main.3eef699a.js",
+    "main.css": "/alisiart-main/static/css/main.a9d1d8fe.css",
+    "main.js": "/alisiart-main/static/js/main.6651baef.js",
     "static/media/13.mp4": "/alisiart-main/static/media/13.b2f60a0d2d05ee657269.mp4",
     "static/media/grib.mp4": "/alisiart-main/static/media/grib.adde34b487fe736a5ae5.mp4",
     "static/media/19.mp4": "/alisiart-main/static/media/19.bf10805fbc1af566bec2.mp4",
@@ -65,12 +65,13 @@
     "static/media/alina2.png": "/alisiart-main/static/media/alina2.71495126ab00f02fee7d.png",
     "static/media/contact.jpg": "/alisiart-main/static/media/contact.6690c3b95d4566e66748.jpg",
     "static/media/BOD_BLAR.TTF": "/alisiart-main/static/media/BOD_BLAR.7b66c0e0c30772fab8f7.TTF",
+    "static/media/logo.png": "/alisiart-main/static/media/logo.7a3c09488fb9f812f2c5.png",
     "index.html": "/alisiart-main/index.html",
-    "main.16f9a64c.css.map": "/alisiart-main/static/css/main.16f9a64c.css.map",
-    "main.3eef699a.js.map": "/alisiart-main/static/js/main.3eef699a.js.map"
+    "main.a9d1d8fe.css.map": "/alisiart-main/static/css/main.a9d1d8fe.css.map",
+    "main.6651baef.js.map": "/alisiart-main/static/js/main.6651baef.js.map"
   },
   "entrypoints": [
-    "static/css/main.16f9a64c.css",
-    "static/js/main.3eef699a.js"
+    "static/css/main.a9d1d8fe.css",
+    "static/js/main.6651baef.js"
   ]
 }
