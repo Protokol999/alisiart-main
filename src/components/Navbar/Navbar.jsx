@@ -38,8 +38,9 @@ export const Navbar = () => {
       className={`navbar${scrolled ? ' navbar--scrolled' : ''}${menuOpen ? ' navbar--menu-open' : ''}`}
     >
       {/* Логотип */}
-      <img src={logo} alt='AlisiArt' className='navbar__logo' />
-
+      <NavLink to='/' onClick={close}>
+        <img src={logo} alt='AlisiArt' className='navbar__logo' />
+      </NavLink>
       {/* Десктоп */}
       <div className='navbar__list'>
         <NavLink to='/'>{t('navbar.home')}</NavLink>
