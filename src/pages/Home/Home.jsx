@@ -103,7 +103,7 @@ export const Home = () => {
         {/* Фото внутри фрейма с декоративной рамкой */}
         <div className='home__artist-photo' ref={r}>
           <div className='home__artist-photo-frame'>
-            <img src={alina} alt='Alina' />
+            <img src={alina} loading='lazy' decoding='async' alt='Alina' />
           </div>
         </div>
         <div className='home__artist-info' ref={r}>
@@ -138,7 +138,13 @@ export const Home = () => {
 
       {/* ───── 05 COMMISSION ───── */}
       <section className='home__commission'>
-        <img className='home__commission-bg' src={picture8} alt='' />
+        <img
+          className='home__commission-bg'
+          loading='lazy'
+          decoding='async'
+          src={picture8}
+          alt=''
+        />
         <div className='home__commission-overlay'>
           <div ref={r}>
             <span className='home__commission-eyebrow'>Custom work</span>

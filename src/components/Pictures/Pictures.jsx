@@ -26,9 +26,17 @@ const pictures = [
 export const Pictures = () => {
   return (
     <section className='pictures' aria-label='Art gallery'>
-      {pictures.map(({ src, alt, className }) => (
+      {pictures.map(({ src, alt, className }, index) => (
         <div key={alt} className={`pictures__item ${className}`}>
-          <img className='pictures__image' src={src} alt={alt} />
+          <img
+            className='pictures__image'
+            src={src}
+            alt={alt}
+            loading={index < 2 ? 'eager' : 'lazy'}
+            decoding='async'
+            width='800'
+            height='600'
+          />
         </div>
       ))}
     </section>

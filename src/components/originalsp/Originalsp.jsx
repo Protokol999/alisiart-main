@@ -17,7 +17,13 @@ export const Originalsp = ({ items, variant }) => {
             className={`originalsp__item originalsp__item--${index + 1}${sold ? ' originalsp__item--sold' : ''}`}
             onClick={() => navigate(`/paintings/${id}`)}
           >
-            <img className='originalsp__image' src={image} alt='' />
+            <img
+              className='originalsp__image'
+              src={image}
+              loading={index < 3 ? 'eager' : 'lazy'}
+              decoding='async'
+              alt=''
+            />
             {sold && (
               <div className='originalsp__sold-badge'>
                 <span>SOLD</span>
